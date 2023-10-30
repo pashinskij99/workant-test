@@ -1,0 +1,8 @@
+.table {
+  margin-bottom: 0 !important;
+  &_head {
+    position: sticky;
+    top: 0;
+    border-top-width: 0 !important;
+  }
+}

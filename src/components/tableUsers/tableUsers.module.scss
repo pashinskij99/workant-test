@@ -1,0 +1,23 @@
+:global {
+  .table-responsive {
+    max-height: 500px;
+  }
+}
+
+.table {
+  margin-bottom: 0 !important;
+  &__head {
+    position: sticky;
+    top: 0;
+    border-top-width: 0 !important;
+    z-index: 1;
+  }
+  &_link {
+    font-size: 26px;
+    &_wrapper {
+      position: sticky;
+      left: 0;
+      border-left-width: 0 !important;
+    }
+  }
+}

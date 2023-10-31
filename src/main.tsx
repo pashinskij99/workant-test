@@ -1,8 +1,9 @@
-import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './components/app'
-import './index.scss'
 import { BrowserRouter } from 'react-router-dom'
+import App from './components/app'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/index.scss'
+import {StrictMode} from "react";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <StrictMode>

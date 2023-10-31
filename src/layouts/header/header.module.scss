@@ -1,3 +1,33 @@
 .header {
-  background-color: #212529;
+  margin: 20px 0;
+  &__container {
+
+  }
+  &__inner {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    width: 100%;
+    padding: var(--padding-2xl);
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-lg);
+  }
+  &__buttonBack {
+    position: absolute;
+    left: var(--padding-2xl);
+    font-size: var(--font-xxl);
+    border: 1px solid transparent;
+    background-color: var(--color-font);
+    color: var(--color-white);
+    padding: 0 var(--padding-xs);
+    border-radius: var(--border-radius-xl);
+  }
+  &__logo {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--color-font);
+    font-size: var(--font-xxl);
+    font-weight: 600;
+  }
 }

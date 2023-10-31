@@ -1,3 +1,3 @@
-import TableUsers from './TableUsers'
+import TableUsers from './TableUsers.tsx'
 
 export default TableUsers

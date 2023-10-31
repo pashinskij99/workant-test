@@ -1,8 +1,41 @@
 .table {
   margin-bottom: 0 !important;
-  &_head {
+  &__head {
     position: sticky;
     top: 0;
     border-top-width: 0 !important;
+  }
+  &__headTr {
+    white-space: nowrap;
+  }
+  &__headTh {
+    background-color: var(--color-blue)!important;
+    p {
+      display: flex;
+      column-gap: 6px;
+      color: var(--color-font);
+    }
+    span {
+      cursor: pointer
+    }
+  }
+
+  &__body {}
+  &__bodyTr {
+    &:nth-of-type(2n) {
+      td {
+        background-color: var(--color-blue);
+      }
+    }
+  }
+  &__bodyTd {
+    p {
+      color: var(--color-font);
+    }
+  }
+
+  &__error {
+    text-align: center;
+    color: var(--color-error);
   }
 }

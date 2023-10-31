@@ -1,3 +1,16 @@
 .wrapper {
-  padding: 50px 0;
+  padding-top: 164px;
+  padding-bottom: 60px;
+}
+
+.content {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--padding-2xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
 }

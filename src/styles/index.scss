@@ -1,0 +1,78 @@
+@import "fonts";
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --main-background: #f8f8f8;
+  --color-white: #ffffff;
+  --color-blue: #e5edf4;
+  --color-font: #0f3057;
+  --color-error: darkred;
+
+  --font-xxl: 24px;
+  --font-xl: 22px;
+  --font-lg: 20px;
+  --font-md: 18px;
+  --font-sm: 16px;
+  --font-xs: 14px;
+
+  --padding-3xl: 32px;
+  --padding-2xl: 26px;
+  --padding-xl: 20px;
+  --padding-lg: 16px;
+  --padding-md: 12px;
+  --padding-sm: 10px;
+  --padding-xs: 6px;
+
+  --border-radius-xl: 26px;
+  --border-radius-lg: 20px;
+  --border-radius-md: 16px;
+  --border-radius-sm: 10px;
+  --border-radius-xs: 6px;
+
+  --shadow-lg: 0 0 20px rgba(0,0,0,.05);
+
+  @media (max-width: 767px) {
+    --padding-2xl: 10px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  font-family: "Euclid Circular B", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: var(--color-font);
+  background-color: var(--main-background);
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+.table-responsive {
+  max-height: 500px;
+}
+

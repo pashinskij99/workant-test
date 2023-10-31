@@ -1,23 +1,78 @@
-:global {
-  .table-responsive {
-    max-height: 500px;
-  }
-}
-
 .table {
   margin-bottom: 0 !important;
   &__head {
+  }
+  &__headTr {
     position: sticky;
     top: 0;
     border-top-width: 0 !important;
     z-index: 1;
+    white-space: nowrap;
+
   }
-  &_link {
-    font-size: 26px;
-    &_wrapper {
+  &__headTh {
+    background-color: var(--color-blue)!important;
+    &:nth-of-type(2) {
       position: sticky;
       left: 0;
-      border-left-width: 0 !important;
+      span {
+        cursor: pointer;
+      }
     }
+    color: var(--color-font);
+
+    p {
+      color: var(--color-font);
+      display: flex;
+      column-gap: 6px;
+    }
+  }
+  &__body {}
+  &__bodyTr {
+    td {
+      p {
+        color: var(--color-font);
+      }
+      div {
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+        span {
+          cursor: pointer;
+        }
+      }
+      &:nth-of-type(2) {
+        position: sticky;
+        left: 0;
+      }
+    }
+
+    &:nth-of-type(2n) {
+      td {
+        background-color: var(--color-blue);
+      }
+    }
+
+  }
+  &__bodyRowList {
+    white-space: nowrap;
+  }
+  &__bodyRowListItemOther {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: 6px;
+    p {
+      cursor: pointer;
+    }
+  }
+  &__bodyRowListItemImage {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  &__error {
+    text-align: center;
+    color: var(--color-error);
   }
 }

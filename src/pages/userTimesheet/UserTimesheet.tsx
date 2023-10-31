@@ -35,6 +35,7 @@ const Content = () => {
             icon={
               <p>📅</p>
             }
+            placeholderText='Filter by start time'
             className={styles.nav__datePicker}
             selected={startDate}
             onChange={(date: number) => {

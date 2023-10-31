@@ -39,3 +39,13 @@ export interface ITableUsersData {
   group: string | null
   division: string | null
 }
+
+export type UserFieldsTypes =
+  | 'firstName'
+  | 'lastName'
+  | 'email'
+  | 'position'
+  | 'phone'
+  | 'postalCode'
+  | 'city'
+  | 'address'

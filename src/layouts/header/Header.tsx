@@ -8,7 +8,7 @@ const Header = () => {
       <Container  className={styles.header__container}>
         <div className={styles.header__inner}>
           <Link className={styles.header__logo} to='/'>
-            <p>Workant</p>
+            <p>workant</p>
           </Link>
         </div>
       </Container>

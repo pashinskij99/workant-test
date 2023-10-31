@@ -17,7 +17,7 @@ interface ITooltipProps {
 const Tooltip = ({children, text}: ITooltipProps) => {
   return (
     <OverlayTrigger
-      placement="bottom"
+      placement="top"
       delay={{ show: 250, hide: 400 }}
       overlay={(props) => renderTooltip({...props, text})}
     >

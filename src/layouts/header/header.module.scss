@@ -11,16 +11,7 @@
     background-color: var(--color-white);
     box-shadow: var(--shadow-lg);
   }
-  &__buttonBack {
-    position: absolute;
-    left: var(--padding-2xl);
-    font-size: var(--font-xxl);
-    border: 1px solid transparent;
-    background-color: var(--color-font);
-    color: var(--color-white);
-    padding: 0 var(--padding-xs);
-    border-radius: var(--border-radius-xl);
-  }
+
   &__logo {
     display: block;
     width: fit-content;

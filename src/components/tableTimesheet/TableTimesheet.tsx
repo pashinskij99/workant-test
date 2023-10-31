@@ -1,9 +1,9 @@
 import { Table } from 'react-bootstrap'
 import styles from './tableTimesheet.module.scss'
-import {IRows} from "../../types";
-import {skipFields} from "../../utils/skipFields.ts";
-import {useContext} from "react";
-import {TimesheetContext} from "../../context/TimesheetContext.tsx";
+import { IRows } from "../../types";
+import { skipFields } from "../../utils/skipFields.ts";
+import { useContext } from "react";
+import { TimesheetContext } from "../../context/TimesheetContext.tsx";
 
 const TableTimesheet = () => {
   const { timesheet, error, filterByDate, toggle } = useContext(TimesheetContext)

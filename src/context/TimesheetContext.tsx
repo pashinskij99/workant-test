@@ -9,6 +9,7 @@ interface ITimesheetContext {
   error?: string
   filterByDate?: (currentToggle: boolean) => void
   toggle?: boolean
+  filterByMonthAndYear?: (date: number) => void
 }
 
 export const TimesheetContext = createContext<ITimesheetContext>({
@@ -22,6 +23,7 @@ interface ITimesheetProvider {
 const TimesheetProvider = ({children}: ITimesheetProvider) => {
   const { userId } = useParams()
   const [error, setError] = useState<string>('')
+  const [data, setData] = useState<ITimesheet[]>([])
   const [timesheet, setTimesheet] = useState<ITimesheet[]>([])
   const [toggle, setToggle] = useState<boolean>(false)
 
@@ -34,7 +36,7 @@ const TimesheetProvider = ({children}: ITimesheetProvider) => {
             (a, b) =>
               new Date(b.startTime).getTime() - new Date(a.startTime).getTime()
           )
-
+        setData(filteredByIdRes)
         setTimesheet(filteredByIdRes)
       })
       .catch(function (error) {
@@ -47,11 +49,22 @@ const TimesheetProvider = ({children}: ITimesheetProvider) => {
 
   const filterByDate = (currentToggle: boolean) => {
     setToggle(prevState => !prevState)
-    setTimesheet(prevState => prevState.sort((a, b) => {
+    setTimesheet(() => data.sort((a, b) => {
       return currentToggle
         ? new Date(b.startTime).getTime() - new Date(a.startTime).getTime()
         : new Date(a.startTime).getTime() - new Date(b.startTime).getTime()
     }))
+  }
+
+  const filterByMonthAndYear = (date: number) => {
+    if(!date) {
+      setTimesheet(data)
+      return
+    }
+
+    setTimesheet(() => data.filter(({startTime}) =>
+      new Date(startTime).getFullYear() === new Date(date).getFullYear()
+      && new Date(startTime).getMonth() === new Date(date).getMonth()))
   }
 
   const value = useMemo(() => ({
@@ -59,7 +72,8 @@ const TimesheetProvider = ({children}: ITimesheetProvider) => {
     userId,
     error,
     filterByDate,
-    toggle
+    toggle,
+    filterByMonthAndYear
   }), [timesheet, userId, error, toggle])
 
   return (

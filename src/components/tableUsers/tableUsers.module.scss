@@ -62,8 +62,8 @@
     align-items: center;
     margin: 0 auto;
     gap: 6px;
-    p {
-      cursor: pointer;
+    p:first-of-type {
+      cursor: context-menu;
     }
   }
   &__bodyRowListItemImage {

@@ -8,7 +8,6 @@ import Tooltip from "../tooltip";
 import {Link} from "react-router-dom";
 import {IRows} from "../../types";
 import {skipFields} from "../../utils/skipFields.ts";
-import {copyTextToClipboard} from "../../utils/copyTextToClipboard.ts";
 
 const TableUsers = () => {
   return (
@@ -49,8 +48,6 @@ const TableContent = () => {
       {id: 10, name: 'Department'},
     ],
   }
-
-  const handleCopyClick = (copyText: string) => copyTextToClipboard(copyText)
 
   if(error) return <h3 className={styles.table__error}>{error}</h3>
 
@@ -95,17 +92,24 @@ const TableContent = () => {
                       <ul className={styles.table__bodyRowList}>
                         <li><p>Name: {item.firstName} {item.lastName}</p></li>
                         <li className={styles.table__bodyRowListItemOther}>
-                          <Tooltip text={item.email}>
-                            <p onClick={() => handleCopyClick(item.email)}>📧</p>
+                          <Tooltip text='Email'>
+                            <p>📧</p>
                           </Tooltip>
-                          <Tooltip text={item.phone}>
-                            <p onClick={() => handleCopyClick(item.phone)}>📱</p>
-                          </Tooltip>
-                          <Tooltip text={item.position}>
-                            <p onClick={() => handleCopyClick(item.position)}>🌍</p>
-                          </Tooltip>
+                          <p>{item.email}</p>
                         </li>
-                      </ul>
+                        <li className={styles.table__bodyRowListItemOther}>
+                          <Tooltip text='Phone'>
+                            <p>📱</p>
+                          </Tooltip>
+                          <p>{item.phone}</p>
+                        </li>
+                        <li className={styles.table__bodyRowListItemOther}>
+                          <Tooltip text='Position'>
+                            <p>🌍</p>
+                          </Tooltip>
+                          <p>{item.position}</p>
+                        </li>
+                        </ul>
                     </td>
                   case 'department':
                     return <td key={key}>

@@ -1,16 +1,91 @@
 .wrapper {
   padding-top: 164px;
   padding-bottom: 60px;
+  .content {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--padding-2xl);
+    box-shadow: var(--shadow-lg);
+  }
 }
 
-.content {
-  background-color: var(--color-white);
-  border-radius: var(--border-radius-lg);
-  padding: var(--padding-2xl);
-  box-shadow: var(--shadow-lg);
-}
-
-.title {
-  text-align: center;
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
+  --width-date-picker: 230px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    row-gap: 16px;
+    --width-date-picker: 230px;
+  }
+  &__buttonBack {
+    font-size: var(--font-xxl);
+    border: 1px solid transparent;
+    background-color: var(--color-font);
+    color: var(--color-white);
+    padding: 0 var(--padding-xs);
+    border-radius: var(--border-radius-xl);
+  }
+  &__title {
+    width: 100%;
+    text-align: start;
+    margin: 0;
+    padding: 0 40px ;
+    @media (max-width: 767px) {
+      padding: 0;
+      text-align: center;
+    }
+  }
+  &__datePickerWrapper {
+    min-width: var(--width-date-picker);
+  }
+  &__datePicker {
+    min-width: var(--width-date-picker);
+    max-width: var(--width-date-picker);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--color-font);
+    padding-left: var(--padding-sm);
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}
+
+:global {
+  .react-datepicker__header.react-datepicker-year-header {
+    background-color: var(--color-blue);
+    color: var(--color-font);
+  }
+  .react-datepicker__navigation {
+    span {
+      &:before {
+        border-color: var(--color-font);
+      }
+    }
+    &:hover {
+      span {
+        &:before {
+          border-color: var(--border-font);
+        }
+      }
+    }
+  }
+  .react-datepicker__navigation-icon {
+    font-size: 12px!important;
+  }
+  .react-datepicker__month-text {
+    color: var(--color-font);
+  }
+  .react-datepicker__month-text--selected {
+    background-color: var(--color-blue)!important;
+    color: var(--color-font)!important;
+  }
+  .react-datepicker__calendar-icon {
+    padding: 0.4rem !important;
+  }
+  .react-datepicker__view-calendar-icon input {
+    padding: 6px 10px 5px 30px!important;
+  }
 }

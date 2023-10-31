@@ -49,7 +49,7 @@ const TimesheetProvider = ({children}: ITimesheetProvider) => {
 
   const filterByDate = (currentToggle: boolean) => {
     setToggle(prevState => !prevState)
-    setTimesheet(() => data.sort((a, b) => {
+    setTimesheet((prevState) => prevState.sort((a, b) => {
       return currentToggle
         ? new Date(b.startTime).getTime() - new Date(a.startTime).getTime()
         : new Date(a.startTime).getTime() - new Date(b.startTime).getTime()

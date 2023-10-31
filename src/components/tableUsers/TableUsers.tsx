@@ -24,7 +24,6 @@ const TableContent = () => {
 
   const rows: IRows = {
     head: [
-      { id: 0, name: 'First name', field: 'firstName' },
       {
         id: 1,
         field: 'lastName',
@@ -35,15 +34,16 @@ const TableContent = () => {
           </p>
         ),
       },
+      { id: 0, name: 'First name', field: 'firstName' },
       { id: 9, name: 'Avatar', field: 'avatar' },
       { id: 2, name: 'Email', field: 'email' },
       { id: 3, name: 'Position', field: 'position' },
       { id: 4, name: 'Phone', field: 'phone' },
+      { id: 8, name: 'Manager', field: 'manager' },
+      { id: 10, name: 'Department', field: 'department' },
       { id: 5, name: 'Address', field: 'address' },
       { id: 6, name: 'Postal code', field: 'postalCode' },
       { id: 7, name: 'City', field: 'city' },
-      { id: 8, name: 'Manager', field: 'manager' },
-      { id: 10, name: 'Department', field: 'department' },
     ],
   }
 

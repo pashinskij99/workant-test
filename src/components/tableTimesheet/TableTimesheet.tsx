@@ -14,9 +14,6 @@ const TableTimesheet = () => {
 
   const rows: IRows = {
     head: [
-      { id: 0, name: 'Assessment', field: 'assessment' },
-      { id: 1, name: 'Break Minutes', field: 'breakMinutes' },
-      { id: 2, name: 'Minutes', field: 'minutes' },
       {
         id: 3,
         name: 'Start Time',
@@ -38,6 +35,9 @@ const TableTimesheet = () => {
           </p>
         ),
       },
+      { id: 0, name: 'Assessment', field: 'assessment' },
+      { id: 1, name: 'Break Minutes', field: 'breakMinutes' },
+      { id: 2, name: 'Minutes', field: 'minutes' },
       { id: 6, name: 'Status', field: 'status' },
       { id: 7, name: 'Approval Person Id', field: 'approvalPersonId' },
       { id: 8, name: 'User Id', field: 'userId' },

@@ -40,6 +40,8 @@
   }
   &__datePickerWrapper {
     min-width: var(--width-date-picker);
+    z-index: 2;
+
   }
   &__datePicker {
     min-width: var(--width-date-picker);

@@ -12,3 +12,5 @@ export interface ITimesheet {
   userId: string
   companyId: string
 }
+
+export type TimesheetFieldsTypes = keyof ITimesheet

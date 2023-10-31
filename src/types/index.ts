@@ -1,8 +1,9 @@
-import {ReactNode} from "react";
+import { ReactNode } from 'react'
 
 interface IRow {
   id: number
   name?: string
+  field: string
   render?: () => ReactNode
 }
 export interface IRows {
